@@ -13,11 +13,11 @@ public class TestService {
 	//private static int ii = 0;
 	
 	public String query(HttpRequestMessageContext msgCtx){
-		
+
+		String a = msgCtx.getParameter("a");
 		String b = msgCtx.getParameter("b");
 		String c = msgCtx.getParameter("c");
 		i.incrementAndGet();
-		System.out.println(i);
-		return null;
+		return a+b+c;
 	}
 }
